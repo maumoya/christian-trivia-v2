@@ -1,0 +1,15 @@
+# Christian Trivia V2
+
+> An offline Bible adventure game for kids aged 5 to 10: walk through the seven days of Creation (Genesis 1 and 2),
+> answer questions, collect timeline cards. English and Español with read-aloud. Plain JavaScript modules and a PWA,
+> no accounts, no tracking. MIT licensed. Owner and author: Mauricio Alonso Moya Tapia.
+
+- Play: https://maumoya.github.io/christian-trivia-v2/
+- V1 (the one-day trivia MVP): https://maumoya.github.io/christian-trivia/
+
+## Docs
+
+- [README](https://github.com/maumoya/christian-trivia-v2/blob/main/README.md): what the game is, results, how to run it
+- [Changelog](https://github.com/maumoya/christian-trivia-v2/blob/main/CHANGELOG.md): releases
+- [Security](https://github.com/maumoya/christian-trivia-v2/blob/main/SECURITY.md): what the game promises and how to report a problem
+- [Contributing](https://github.com/maumoya/christian-trivia-v2/blob/main/CONTRIBUTING.md)

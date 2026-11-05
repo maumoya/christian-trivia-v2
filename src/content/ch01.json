@@ -1,0 +1,211 @@
+{
+  "id": "ch01",
+  "title": { "en": "Creation", "es": "La creación" },
+  "memoryVerse": { "ref": "Gen 1:1" },
+  "scenes": [
+    {
+      "id": "s1", "ord": 1, "refs": ["Gen 1:1", "Gen 1:2", "Gen 1:3", "Gen 1:4", "Gen 1:5"], "walk": true,
+      "narration": {
+        "en": "In the beginning, there was only dark water. God's Spirit moved over the water. Then God spoke: 'Let there be light!'",
+        "es": "Al principio solo había agua oscura. El Espíritu de Dios se movía sobre el agua. Entonces Dios habló: '¡Que haya luz!'"
+      },
+      "quests": [
+        { "id": "q-s1", "type": "answer", "at": "spot-s1", "opensGate": "s2",
+          "question": { "id": "s1q1",
+            "prompt": { "en": "What did God make when He spoke?", "es": "¿Qué hizo Dios cuando habló?" },
+            "answers": [
+              { "id": "a", "label": { "en": "light", "es": "luz" }, "pic": "light" },
+              { "id": "b", "label": { "en": "a house", "es": "una casa" }, "pic": "house" },
+              { "id": "c", "label": { "en": "a fish", "es": "un pez" }, "pic": "fish" }
+            ],
+            "correct": "a",
+            "hint": { "en": "Watch the dark again. What filled it?", "es": "Mira la oscuridad otra vez. ¿Qué la llenó?" } } }
+      ],
+      "card": { "en": "Day 1: Light", "es": "Día 1: La luz" }
+    },
+    {
+      "id": "s2", "ord": 2, "refs": ["Gen 1:6", "Gen 1:7", "Gen 1:8"], "walk": true,
+      "narration": {
+        "en": "God made a big open space between the waters. Water below, and the sky up above.",
+        "es": "Dios hizo un gran espacio entre las aguas. Agua abajo, y el cielo arriba."
+      },
+      "quests": [
+        { "id": "q-s2", "type": "answer", "at": "spot-s2", "opensGate": "s3",
+          "question": { "id": "s2q1",
+            "prompt": { "en": "What did God put between the waters?", "es": "¿Qué puso Dios entre las aguas?" },
+            "answers": [
+              { "id": "a", "label": { "en": "a mountain", "es": "una montaña" }, "pic": "mountain" },
+              { "id": "b", "label": { "en": "the sky", "es": "el cielo" }, "pic": "sky" },
+              { "id": "c", "label": { "en": "a tree", "es": "un árbol" }, "pic": "tree" }
+            ],
+            "correct": "b",
+            "hint": { "en": "Look up! What is above the water?", "es": "¡Mira arriba! ¿Qué hay sobre el agua?" } } }
+      ],
+      "card": { "en": "Day 2: Sky", "es": "Día 2: El cielo" }
+    },
+    {
+      "id": "s3", "ord": 3, "refs": ["Gen 1:9", "Gen 1:10", "Gen 1:11", "Gen 1:12", "Gen 1:13"], "walk": true,
+      "narration": {
+        "en": "God gathered the water into seas, and dry land came up. Then God said, 'Grow!' Grass, plants and fruit trees covered the land.",
+        "es": "Dios juntó el agua en mares, y apareció la tierra seca. Luego Dios dijo: '¡Crezcan!' Pasto, plantas y árboles con fruto cubrieron la tierra."
+      },
+      "quests": [
+        { "id": "q-s3", "type": "answer", "at": "spot-s3", "opensGate": "s4",
+          "question": { "id": "s3q1",
+            "prompt": { "en": "What grew on the dry land?", "es": "¿Qué creció en la tierra seca?" },
+            "answers": [
+              { "id": "a", "label": { "en": "stars", "es": "estrellas" }, "pic": "stars" },
+              { "id": "b", "label": { "en": "birds", "es": "aves" }, "pic": "bird" },
+              { "id": "c", "label": { "en": "plants and trees", "es": "plantas y árboles" }, "pic": "plants" }
+            ],
+            "correct": "c",
+            "hint": { "en": "Look at the ground. What is growing?", "es": "Mira el suelo. ¿Qué está creciendo?" } } }
+      ],
+      "card": { "en": "Day 3: Land and plants", "es": "Día 3: Tierra y plantas" }
+    },
+    {
+      "id": "s4", "ord": 4, "refs": ["Gen 1:14", "Gen 1:15", "Gen 1:16", "Gen 1:17", "Gen 1:18", "Gen 1:19"], "walk": true,
+      "narration": {
+        "en": "God put lights in the sky: the sun to rule the day, the moon for the night, and the stars too. They mark days, seasons and years.",
+        "es": "Dios puso luces en el cielo: el sol para el día, la luna para la noche, y también las estrellas. Marcan los días, las estaciones y los años."
+      },
+      "quests": [
+        { "id": "q-s4", "type": "answer", "at": "spot-s4", "opensGate": "s5",
+          "question": { "id": "s4q1",
+            "prompt": { "en": "Which light did God make for the night?", "es": "¿Qué luz hizo Dios para la noche?" },
+            "answers": [
+              { "id": "a", "label": { "en": "a candle", "es": "una vela" }, "pic": "candle" },
+              { "id": "b", "label": { "en": "the moon", "es": "la luna" }, "pic": "moon" },
+              { "id": "c", "label": { "en": "a fire", "es": "un fuego" }, "pic": "fire" }
+            ],
+            "correct": "b",
+            "hint": { "en": "When the sun goes down, what shines?", "es": "Cuando el sol se va, ¿qué brilla?" } } }
+      ],
+      "card": { "en": "Day 4: Sun, moon, stars", "es": "Día 4: Sol, luna, estrellas" }
+    },
+    {
+      "id": "s5", "ord": 5, "refs": ["Gen 1:20", "Gen 1:21", "Gen 1:22", "Gen 1:23"], "walk": true,
+      "narration": {
+        "en": "God filled the seas with fish and great sea creatures, and the sky with birds. God blessed them: 'Have many babies and fill the earth!'",
+        "es": "Dios llenó los mares de peces y grandes animales marinos, y el cielo de aves. Dios los bendijo: '¡Tengan muchas crías y llenen la tierra!'"
+      },
+      "quests": [
+        { "id": "q-s5", "type": "answer", "at": "spot-s5", "opensGate": "s6",
+          "question": { "id": "s5q1",
+            "prompt": { "en": "What did God put in the sky on day 5?", "es": "¿Qué puso Dios en el cielo el día 5?" },
+            "answers": [
+              { "id": "a", "label": { "en": "birds", "es": "aves" }, "pic": "bird" },
+              { "id": "b", "label": { "en": "cows", "es": "vacas" }, "pic": "cow" },
+              { "id": "c", "label": { "en": "people", "es": "personas" }, "pic": "people" }
+            ],
+            "correct": "a",
+            "hint": { "en": "Look up. What is flying?", "es": "Mira arriba. ¿Qué está volando?" } } }
+      ],
+      "card": { "en": "Day 5: Fish and birds", "es": "Día 5: Peces y aves" }
+    },
+    {
+      "id": "s6", "ord": 6, "refs": ["Gen 1:24", "Gen 1:25"], "walk": true,
+      "narration": {
+        "en": "Then God made animals for the land: big ones, small ones, and ones that creep and crawl. God saw that it was good.",
+        "es": "Luego Dios hizo animales para la tierra: grandes, pequeños, y los que se arrastran. Dios vio que era bueno."
+      },
+      "quests": [
+        { "id": "q-find-animals", "type": "find", "at": "spot-s6-find", "items": ["lamb", "lizard", "bear"],
+          "hint": { "en": "Look in the grass for a lamb, a lizard and a bear.", "es": "Busca en el pasto un corderito, una lagartija y un oso." } },
+        { "id": "q-s6", "type": "answer", "at": "spot-s6", "opensGate": "s7",
+          "question": { "id": "s6q1",
+            "prompt": { "en": "What did God say about everything He made?", "es": "¿Qué dijo Dios de todo lo que hizo?" },
+            "answers": [
+              { "id": "a", "label": { "en": "it is too small", "es": "es muy pequeño" }, "pic": "small" },
+              { "id": "b", "label": { "en": "it is wrong", "es": "está mal" }, "pic": "wrong" },
+              { "id": "c", "label": { "en": "it is good", "es": "es bueno" }, "pic": "good" }
+            ],
+            "correct": "c",
+            "hint": { "en": "Listen to the end again. What did God see?", "es": "Escucha el final otra vez. ¿Qué vio Dios?" } } }
+      ],
+      "card": { "en": "Day 6: Animals", "es": "Día 6: Los animales" }
+    },
+    {
+      "id": "s7", "ord": 7, "refs": ["Gen 1:26", "Gen 1:27", "Gen 1:28", "Gen 1:29", "Gen 1:30", "Gen 1:31", "Gen 2:7", "Gen 2:8", "Gen 2:9", "Gen 2:15", "Gen 2:18", "Gen 2:19", "Gen 2:20", "Gen 2:21", "Gen 2:22", "Gen 2:23"], "walk": true,
+      "narration": {
+        "en": "Then God said, 'Let us make people like Us.' God made the first man from the dust of the ground and breathed life into him. God put him in a garden called Eden to take care of it. The man gave names to all the animals. Then God made a woman from the man's side, and the man was so happy. God made people in His own image.",
+        "es": "Entonces Dios dijo: 'Hagamos a las personas a Nuestra imagen.' Dios formó al primer hombre del polvo de la tierra y sopló vida en él. Dios lo puso en un huerto llamado Edén para cuidarlo. El hombre puso nombre a todos los animales. Luego Dios hizo a una mujer del costado del hombre, y el hombre se alegró mucho. Dios hizo a las personas a Su imagen."
+      },
+      "quests": [
+        { "id": "q-s7a", "type": "answer", "at": "spot-s7a",
+          "question": { "id": "s7q1",
+            "prompt": { "en": "God made people like whom?", "es": "¿A imagen de quién hizo Dios a las personas?" },
+            "answers": [
+              { "id": "a", "label": { "en": "like the animals", "es": "como los animales" }, "pic": "cow" },
+              { "id": "b", "label": { "en": "like God", "es": "como Dios" }, "pic": "light" },
+              { "id": "c", "label": { "en": "like the stars", "es": "como las estrellas" }, "pic": "stars" }
+            ],
+            "correct": "b",
+            "hint": { "en": "Listen again: 'Let us make people like…'", "es": "Escucha otra vez: 'Hagamos a las personas a…'" } } },
+        { "id": "q-tend", "type": "choose", "at": "spot-s7-tend",
+          "prompt": { "en": "God put Adam in the garden. What should Adam do?", "es": "Dios puso a Adán en el huerto. ¿Qué debe hacer Adán?" },
+          "options": [
+            { "id": "tend", "label": { "en": "Take care of the garden", "es": "Cuidar el huerto" }, "pic": "water" },
+            { "id": "leave", "label": { "en": "Walk away from it", "es": "Irse del huerto" }, "pic": "away" }
+          ],
+          "accepted": "tend", "ref": "Gen 2:15",
+          "hint": { "en": "God put the man in the garden to work it and keep it.", "es": "Dios puso al hombre en el huerto para que lo labrara y lo guardase." } },
+        { "id": "q-s7b", "type": "answer", "at": "spot-s7b", "opensGate": "s8",
+          "question": { "id": "s7q2",
+            "prompt": { "en": "What job did God give the man?", "es": "¿Qué trabajo le dio Dios al hombre?" },
+            "answers": [
+              { "id": "a", "label": { "en": "build a city", "es": "construir una ciudad" }, "pic": "city" },
+              { "id": "b", "label": { "en": "catch fish", "es": "pescar" }, "pic": "fish" },
+              { "id": "c", "label": { "en": "care for the garden", "es": "cuidar el huerto" }, "pic": "water" }
+            ],
+            "correct": "c",
+            "hint": { "en": "Why did God put him in the garden?", "es": "¿Para qué lo puso Dios en el huerto?" } } }
+      ],
+      "card": { "en": "Day 6: People", "es": "Día 6: Las personas" }
+    },
+    {
+      "id": "s8", "ord": 8, "refs": ["Gen 2:1", "Gen 2:2", "Gen 2:3"], "walk": true,
+      "narration": {
+        "en": "God finished everything He made. On the seventh day God rested, and He made that day special and holy.",
+        "es": "Dios terminó todo lo que hizo. El séptimo día Dios descansó, y lo hizo un día especial y santo."
+      },
+      "quests": [
+        { "id": "q-s8", "type": "answer", "at": "spot-s8",
+          "question": { "id": "s8q1",
+            "prompt": { "en": "What did God do on the seventh day?", "es": "¿Qué hizo Dios el séptimo día?" },
+            "answers": [
+              { "id": "a", "label": { "en": "He made the sea", "es": "hizo el mar" }, "pic": "sea" },
+              { "id": "b", "label": { "en": "He rested", "es": "descansó" }, "pic": "rest" },
+              { "id": "c", "label": { "en": "He made the moon", "es": "hizo la luna" }, "pic": "moon" }
+            ],
+            "correct": "b",
+            "hint": { "en": "The work was finished. What came next?", "es": "El trabajo terminó. ¿Qué vino después?" } } },
+        { "id": "q-rest", "type": "choose", "at": "spot-s8-rest",
+          "prompt": { "en": "The seventh day is here. What will you do?", "es": "Llegó el séptimo día. ¿Qué vas a hacer?" },
+          "options": [
+            { "id": "rest", "label": { "en": "Rest, like God rested", "es": "Descansar, como Dios descansó" }, "pic": "rest" },
+            { "id": "work", "label": { "en": "Keep working", "es": "Seguir trabajando" }, "pic": "work" }
+          ],
+          "accepted": "rest", "ref": "Gen 2:2–3",
+          "hint": { "en": "On the seventh day God rested from all His work.", "es": "El séptimo día Dios reposó de toda su obra." } }
+      ],
+      "card": { "en": "Day 7: Rest", "es": "Día 7: Descanso" }
+    }
+  ],
+  "storyItems": ["st-lion", "st-sheep", "st-camel", "st-eagle", "st-dove", "st-fish", "st-horse", "st-goat", "st-owl", "st-frog", "st-deer", "st-rabbit"],
+  "versePieces": ["vp1", "vp2", "vp3", "vp4", "vp5"],
+  "badges": [
+    { "id": "b-blessing", "kind": "blessing", "ref": "Gen 1:28", "title": { "en": "God blessed them", "es": "Dios los bendijo" }, "earnedBy": "q-s7a" },
+    { "id": "b-journey-creation", "kind": "journey", "ref": "Gen 1:1–2:3", "title": { "en": "Creation walked", "es": "Recorriste la creación" }, "earnedBy": "chapter-end" }
+  ],
+  "companions": [
+    { "id": "lamb", "joinsAt": "q-find-animals", "name": { "en": "Little lamb", "es": "Corderito" } }
+  ],
+  "end": {
+    "tryToday": {
+      "en": "Go outside and find three things God made. Say thank you for each one.",
+      "es": "Sal afuera y busca tres cosas que Dios hizo. Da gracias por cada una."
+    },
+    "reviewSeeds": ["s1q1", "s4q1", "s7q1", "s8q1"]
+  }
+}

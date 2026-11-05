@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>ARCA · Creation</title>
+<meta name="theme-color" content="#121a33">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<style>
+:root {
+  --night: #121a33; --deep: #1d2a52; --ink: #f7f1e1; --gold: #f2c14e; --gold-2: #ffe6a0;
+  --sheet: #fff8e8; --sheet-ink: #2a2440; --soft: #e9dfc6; --ok: #4f9d69;
+  --font: ui-rounded, "SF Pro Rounded", "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { height: 100%; margin: 0; background: var(--night); color: var(--ink); font-family: var(--font); overflow: hidden; -webkit-tap-highlight-color: transparent; }
+body { touch-action: none; user-select: none; -webkit-user-select: none; }
+#world { position: fixed; inset: 0; width: 100%; height: 100%; display: block; image-rendering: pixelated; }
+#loading { position: fixed; inset: 0; display: grid; place-items: center; font-size: 2rem; color: var(--gold); }
+#hud { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 8px); left: max(8px, env(safe-area-inset-left, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; pointer-events: none; z-index: 5; }
+.chip { pointer-events: auto; min-height: 48px; min-width: 48px; padding: 0 14px; border-radius: 24px; border: 2px solid rgba(242,193,78,.5); background: rgba(18,26,51,.78); color: var(--ink); font: 600 1rem var(--font); cursor: pointer; }
+.chip[aria-pressed="false"] { opacity: .8; }
+#toast { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 18px); transform: translateX(-50%); max-width: min(92vw, 560px); padding: 12px 20px; border-radius: 20px; background: var(--gold); color: var(--sheet-ink); font: 700 1.1rem var(--font); text-align: center; z-index: 8; box-shadow: 0 6px 24px rgba(0,0,0,.35); pointer-events: none; }
+#sheet[data-open="1"] ~ #toast { top: calc(env(safe-area-inset-top, 0px) + 66px); bottom: auto; }
+#sheet[data-open="1"] { position: fixed; inset: 0; background: rgba(8,12,28,.55); z-index: 6; display: grid; place-items: end center; padding: 12px max(12px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 12px) max(12px, env(safe-area-inset-left, 0px)); }
+.sheet { position: relative; width: min(100%, 720px); max-height: calc(100% - 64px); overflow: auto; background: var(--sheet); color: var(--sheet-ink); border-radius: 28px; padding: 22px 22px 18px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 -8px 40px rgba(0,0,0,.4); user-select: text; -webkit-user-select: text; touch-action: auto; }
+.sheet h2 { margin: 0; font-size: 1.6rem; color: #7a4f00; text-wrap: balance; }
+.sheet .light { position: absolute; inset: -40px 0 auto; height: 120px; background: radial-gradient(closest-side, rgba(255,230,160,.9), rgba(255,230,160,0)); pointer-events: none; animation: breathe 3s ease-in-out infinite; }
+@keyframes breathe { 50% { opacity: .55; } }
+.caption { font-size: 1.25rem; line-height: 1.5; margin: 0; max-width: 62ch; }
+.prompt { font-size: 1.5rem; font-weight: 700; margin: 0; text-wrap: balance; }
+.big { font-size: 2.4rem; font-weight: 800; margin: 0; text-align: center; color: #7a4f00; }
+.hint { margin: 0; padding: 10px 14px; border-radius: 14px; background: #fff0c2; font-size: 1.15rem; }
+.small { font-size: .95rem; opacity: .8; margin: 0; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; align-items: center; }
+.btn { min-height: 64px; padding: 0 22px; border-radius: 20px; border: none; font: 700 1.15rem var(--font); cursor: pointer; }
+.btn.go { background: var(--gold); color: var(--sheet-ink); box-shadow: 0 4px 0 #b88a1d; }
+.btn.soft { background: var(--soft); color: var(--sheet-ink); }
+.btn:focus-visible, .pick:focus-visible, .chip:focus-visible, .tab:focus-visible { outline: 4px solid #3a6ea5; outline-offset: 2px; }
+.picks { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
+.pick { min-height: 120px; border-radius: 22px; border: 3px solid var(--soft); background: #fff; color: var(--sheet-ink); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; cursor: pointer; font: 700 1.1rem var(--font); padding: 10px; }
+.pick:active { transform: scale(.97); }
+.pick .pic { font-size: 3rem; line-height: 1; }
+.verses { background: #f3ead2; border-radius: 14px; padding: 8px 14px; }
+.verses summary { cursor: pointer; font-weight: 700; min-height: 40px; display: flex; align-items: center; }
+.verses p { margin: 6px 0; line-height: 1.5; font-size: 1.05rem; }
+.banner { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 66px); left: 50%; transform: translateX(-50%); z-index: 6; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; max-width: 94vw; padding: 8px 14px; border-radius: 22px; background: var(--sheet); color: var(--sheet-ink); font: 700 1.2rem var(--font); box-shadow: 0 6px 20px rgba(0,0,0,.35); }
+.banner .need { font-size: 1.8rem; filter: grayscale(.2); }
+.banner .got { font-size: 1.4rem; opacity: .6; }
+.banner .btn { min-height: 48px; font-size: 1rem; }
+.stars { font-size: 3rem; letter-spacing: 4px; color: #e0a400; margin: 0; text-align: center; }
+.memory, .try { font-size: 1.15rem; margin: 0; line-height: 1.5; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.done { color: var(--ok); font-weight: 800; }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.tab { min-height: 52px; padding: 0 16px; border-radius: 16px; border: 2px solid var(--soft); background: #fff; font: 700 1.05rem var(--font); color: var(--sheet-ink); cursor: pointer; }
+.tab.on { background: var(--gold); border-color: var(--gold); }
+.bookbody { display: flex; flex-direction: column; gap: 10px; }
+.card { padding: 12px 14px; border-radius: 16px; background: #fff; border: 2px solid var(--soft); }
+.grid { display: flex; flex-wrap: wrap; gap: 8px; font-size: 2rem; margin: 0; }
+.grid .need { opacity: .35; }
+.pathbar { font-size: 1.6rem; word-break: break-all; margin: 0; }
+.adult label, .settings label { display: flex; gap: 10px; align-items: center; font-size: 1.05rem; flex-wrap: wrap; }
+.settings label.col { flex-direction: column; align-items: stretch; }
+.settings input, .settings select, .settings textarea, .adult input { font: 1.05rem var(--font); min-height: 44px; padding: 6px 10px; border-radius: 10px; border: 2px solid var(--soft); background: #fff; color: var(--sheet-ink); }
+.adult .math { font-size: 1.4rem; font-weight: 800; }
+.adult input { width: 7em; }
+.btn.hold.pressing { background: #ffe6a0; }
+.btn.hold.held { background: var(--ok); color: #fff; }
+@media (prefers-reduced-motion: reduce) { .sheet .light { animation: none; } }
+@media (max-height: 520px) { .sheet { max-height: calc(100% - 20px); padding: 14px; gap: 10px; } .pick { min-height: 92px; } .pick .pic { font-size: 2.2rem; } }
+</style>
+</head>
+<body>
+<canvas id="world" aria-label="The world of Creation. Walk with the arrow keys, or touch and drag."></canvas>
+<div id="loading">ARCA ✨</div>
+<div id="hud"></div>
+<div id="sheet" aria-live="polite"></div>
+<div id="toast" role="status" hidden></div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

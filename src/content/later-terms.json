@@ -1,0 +1,14 @@
+[
+  {"term": "Eve", "firstOrd": 101},
+  {"term": "Eva", "firstOrd": 101},
+  {"term": "serpent", "firstOrd": 101},
+  {"term": "snake", "firstOrd": 101},
+  {"term": "serpiente", "firstOrd": 101},
+  {"term": "Cain", "firstOrd": 102},
+  {"term": "Caín", "firstOrd": 102},
+  {"term": "Abel", "firstOrd": 102},
+  {"term": "Noah", "firstOrd": 103},
+  {"term": "Noé", "firstOrd": 103},
+  {"term": "ark", "firstOrd": 103, "only": ["narration", "hint"]},
+  {"term": "arca", "firstOrd": 103, "only": ["narration", "hint"]}
+]
