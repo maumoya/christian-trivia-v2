@@ -19,5 +19,8 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Syntax check (fails on any error)
+        run: git ls-files '*.js' | xargs -n1 node --check
+
       - name: Run tests
         run: node --test

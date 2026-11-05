@@ -12,7 +12,7 @@
   <a href="https://github.com/maumoya/christian-trivia-v2/actions/workflows/test.yml"><img src="https://github.com/maumoya/christian-trivia-v2/actions/workflows/test.yml/badge.svg" alt="Tests"></a>
   <a href="https://github.com/maumoya/christian-trivia-v2/actions/workflows/codeql.yml"><img src="https://github.com/maumoya/christian-trivia-v2/actions/workflows/codeql.yml/badge.svg" alt="CodeQL"></a>
   <a href="https://scorecard.dev/viewer/?uri=github.com/maumoya/christian-trivia-v2"><img src="https://api.scorecard.dev/projects/github.com/maumoya/christian-trivia-v2/badge" alt="OpenSSF Scorecard"></a>
-  <!--bestpractices-badge-->
+  [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/16354/badge)](https://www.bestpractices.dev/projects/16354)
 </p>
 
 <p align="center">
